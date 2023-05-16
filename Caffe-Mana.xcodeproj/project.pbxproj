@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6045E172A131D6E0033480C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C6045E162A131D6E0033480C /* ComposableArchitecture */; };
+		C6045E1B2A1375820033480C /* drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E1A2A1375820033480C /* drink.swift */; };
+		C6045E1E2A137C650033480C /* drinkDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E1D2A137C650033480C /* drinkDataBase.swift */; };
+		C6045E212A13A84E0033480C /* svgImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E202A13A84E0033480C /* svgImage.swift */; };
 		F55E95B82A128EA800B4F7CA /* Caffe_ManaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95B72A128EA800B4F7CA /* Caffe_ManaApp.swift */; };
 		F55E95BA2A128EA800B4F7CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95B92A128EA800B4F7CA /* ContentView.swift */; };
 		F55E95BC2A128EA900B4F7CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55E95BB2A128EA900B4F7CA /* Assets.xcassets */; };
@@ -34,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C6045E1A2A1375820033480C /* drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drink.swift; sourceTree = "<group>"; };
+		C6045E1D2A137C650033480C /* drinkDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drinkDataBase.swift; sourceTree = "<group>"; };
+		C6045E202A13A84E0033480C /* svgImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = svgImage.swift; sourceTree = "<group>"; };
 		F55E95B42A128EA800B4F7CA /* Caffe-Mana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Caffe-Mana.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55E95B72A128EA800B4F7CA /* Caffe_ManaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffe_ManaApp.swift; sourceTree = "<group>"; };
 		F55E95B92A128EA800B4F7CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6045E172A131D6E0033480C /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +79,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6045E0A2A130E9D0033480C /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				F55E95B92A128EA800B4F7CA /* ContentView.swift */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		C6045E0E2A1313310033480C /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
+		C6045E182A1374BB0033480C /* Consts */ = {
+			isa = PBXGroup;
+			children = (
+				C6045E1D2A137C650033480C /* drinkDataBase.swift */,
+			);
+			path = Consts;
+			sourceTree = "<group>";
+		};
+		C6045E192A1374C80033480C /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				C6045E1A2A1375820033480C /* drink.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		C6045E1F2A13A8220033480C /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				C6045E202A13A84E0033480C /* svgImage.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		F55E95AB2A128EA700B4F7CA = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +141,12 @@
 		F55E95B62A128EA800B4F7CA /* Caffe-Mana */ = {
 			isa = PBXGroup;
 			children = (
+				C6045E1F2A13A8220033480C /* utils */,
+				C6045E192A1374C80033480C /* Types */,
+				C6045E182A1374BB0033480C /* Consts */,
+				C6045E0E2A1313310033480C /* Domains */,
+				C6045E0A2A130E9D0033480C /* Presentations */,
 				F55E95B72A128EA800B4F7CA /* Caffe_ManaApp.swift */,
-				F55E95B92A128EA800B4F7CA /* ContentView.swift */,
 				F55E95BB2A128EA900B4F7CA /* Assets.xcassets */,
 				F55E95BD2A128EA900B4F7CA /* Preview Content */,
 			);
@@ -143,6 +194,9 @@
 			dependencies = (
 			);
 			name = "Caffe-Mana";
+			packageProductDependencies = (
+				C6045E162A131D6E0033480C /* ComposableArchitecture */,
+			);
 			productName = "Caffe-Mana";
 			productReference = F55E95B42A128EA800B4F7CA /* Caffe-Mana.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +269,9 @@
 				Base,
 			);
 			mainGroup = F55E95AB2A128EA700B4F7CA;
+			packageReferences = (
+				C6045E152A131D6E0033480C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = F55E95B52A128EA800B4F7CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +314,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6045E212A13A84E0033480C /* svgImage.swift in Sources */,
 				F55E95BA2A128EA800B4F7CA /* ContentView.swift in Sources */,
+				C6045E1B2A1375820033480C /* drink.swift in Sources */,
 				F55E95B82A128EA800B4F7CA /* Caffe_ManaApp.swift in Sources */,
+				C6045E1E2A137C650033480C /* drinkDataBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +643,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C6045E152A131D6E0033480C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture#what-is-the-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.53.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C6045E162A131D6E0033480C /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6045E152A131D6E0033480C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F55E95AC2A128EA700B4F7CA /* Project object */;
 }
