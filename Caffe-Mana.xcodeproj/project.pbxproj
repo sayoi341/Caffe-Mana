@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C6045E172A131D6E0033480C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C6045E162A131D6E0033480C /* ComposableArchitecture */; };
 		C6045E1B2A1375820033480C /* drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E1A2A1375820033480C /* drink.swift */; };
 		C6045E1E2A137C650033480C /* drinkDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E1D2A137C650033480C /* drinkDataBase.swift */; };
 		C6045E212A13A84E0033480C /* svgImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E202A13A84E0033480C /* svgImage.swift */; };
@@ -22,6 +21,7 @@
 		F55E95D32A128EA900B4F7CA /* Caffe_ManaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95D22A128EA900B4F7CA /* Caffe_ManaUITests.swift */; };
 		F55E95D52A128EA900B4F7CA /* Caffe_ManaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95D42A128EA900B4F7CA /* Caffe_ManaUITestsLaunchTests.swift */; };
 		F5D3AC7D2A14786900A47457 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3AC7C2A14786900A47457 /* Loading.swift */; };
+		F59CC9942A13D2C300424585 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = F59CC9932A13D2C300424585 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,7 +207,7 @@
 			);
 			name = "Caffe-Mana";
 			packageProductDependencies = (
-				C6045E162A131D6E0033480C /* ComposableArchitecture */,
+				F59CC9932A13D2C300424585 /* ComposableArchitecture */,
 			);
 			productName = "Caffe-Mana";
 			productReference = F55E95B42A128EA800B4F7CA /* Caffe-Mana.app */;
@@ -282,7 +282,7 @@
 			);
 			mainGroup = F55E95AB2A128EA700B4F7CA;
 			packageReferences = (
-				C6045E152A131D6E0033480C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				F59CC9922A13D2C300424585 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = F55E95B52A128EA800B4F7CA /* Products */;
 			projectDirPath = "";
@@ -661,9 +661,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C6045E152A131D6E0033480C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		F59CC9922A13D2C300424585 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture#what-is-the-composable-architecture";
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.53.0;
@@ -672,9 +672,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C6045E162A131D6E0033480C /* ComposableArchitecture */ = {
+		F59CC9932A13D2C300424585 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C6045E152A131D6E0033480C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			package = F59CC9922A13D2C300424585 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
