@@ -20,6 +20,7 @@
 		F55E95C92A128EA900B4F7CA /* Caffe_ManaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95C82A128EA900B4F7CA /* Caffe_ManaTests.swift */; };
 		F55E95D32A128EA900B4F7CA /* Caffe_ManaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95D22A128EA900B4F7CA /* Caffe_ManaUITests.swift */; };
 		F55E95D52A128EA900B4F7CA /* Caffe_ManaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95D42A128EA900B4F7CA /* Caffe_ManaUITestsLaunchTests.swift */; };
+		F5D3AC7D2A14786900A47457 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3AC7C2A14786900A47457 /* Loading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		F55E95CE2A128EA900B4F7CA /* Caffe-ManaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Caffe-ManaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55E95D22A128EA900B4F7CA /* Caffe_ManaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffe_ManaUITests.swift; sourceTree = "<group>"; };
 		F55E95D42A128EA900B4F7CA /* Caffe_ManaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffe_ManaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F5D3AC7C2A14786900A47457 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; tabWidth = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				F55E95B92A128EA800B4F7CA /* ContentView.swift */,
 				C6045E222A13C0510033480C /* Layout.swift */,
+				F5D3AC7C2A14786900A47457 /* Loading.swift */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				C6045E1B2A1375820033480C /* drink.swift in Sources */,
 				F55E95B82A128EA800B4F7CA /* Caffe_ManaApp.swift in Sources */,
 				C6045E232A13C0510033480C /* Layout.swift in Sources */,
+				F5D3AC7D2A14786900A47457 /* Loading.swift in Sources */,
 				C6045E1E2A137C650033480C /* drinkDataBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
