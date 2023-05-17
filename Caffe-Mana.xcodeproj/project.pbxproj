@@ -11,6 +11,8 @@
 		C6045E1B2A1375820033480C /* drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E1A2A1375820033480C /* drink.swift */; };
 		C6045E1E2A137C650033480C /* drinkDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E1D2A137C650033480C /* drinkDataBase.swift */; };
 		C6045E212A13A84E0033480C /* svgImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E202A13A84E0033480C /* svgImage.swift */; };
+		C6045E232A13C0510033480C /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E222A13C0510033480C /* Layout.swift */; };
+		C6045E252A13C4B90033480C /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E242A13C4B90033480C /* Root.swift */; };
 		F55E95B82A128EA800B4F7CA /* Caffe_ManaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95B72A128EA800B4F7CA /* Caffe_ManaApp.swift */; };
 		F55E95BA2A128EA800B4F7CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95B92A128EA800B4F7CA /* ContentView.swift */; };
 		F55E95BC2A128EA900B4F7CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55E95BB2A128EA900B4F7CA /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		C6045E1A2A1375820033480C /* drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drink.swift; sourceTree = "<group>"; };
 		C6045E1D2A137C650033480C /* drinkDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drinkDataBase.swift; sourceTree = "<group>"; };
 		C6045E202A13A84E0033480C /* svgImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = svgImage.swift; sourceTree = "<group>"; };
+		C6045E222A13C0510033480C /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		C6045E242A13C4B90033480C /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		F55E95B42A128EA800B4F7CA /* Caffe-Mana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Caffe-Mana.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55E95B72A128EA800B4F7CA /* Caffe_ManaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffe_ManaApp.swift; sourceTree = "<group>"; };
 		F55E95B92A128EA800B4F7CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				F55E95B92A128EA800B4F7CA /* ContentView.swift */,
+				C6045E222A13C0510033480C /* Layout.swift */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 		C6045E0E2A1313310033480C /* Domains */ = {
 			isa = PBXGroup;
 			children = (
+				C6045E242A13C4B90033480C /* Root.swift */,
 			);
 			path = Domains;
 			sourceTree = "<group>";
@@ -316,8 +322,10 @@
 			files = (
 				C6045E212A13A84E0033480C /* svgImage.swift in Sources */,
 				F55E95BA2A128EA800B4F7CA /* ContentView.swift in Sources */,
+				C6045E252A13C4B90033480C /* Root.swift in Sources */,
 				C6045E1B2A1375820033480C /* drink.swift in Sources */,
 				F55E95B82A128EA800B4F7CA /* Caffe_ManaApp.swift in Sources */,
+				C6045E232A13C0510033480C /* Layout.swift in Sources */,
 				C6045E1E2A137C650033480C /* drinkDataBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
