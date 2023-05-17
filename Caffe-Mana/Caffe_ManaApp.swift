@@ -4,7 +4,7 @@ import SwiftUI
 struct Caffe_ManaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Loading()
         }
     }
 }
