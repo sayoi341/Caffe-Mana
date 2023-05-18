@@ -61,6 +61,7 @@ struct Layout<Home: View, Add: View, Setting: View>: View {
                     }
                 }
             }
+            .navigationViewStyle(.stack)
         }
     }
 }
