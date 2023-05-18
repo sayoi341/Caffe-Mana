@@ -9,7 +9,17 @@ struct Caffe_ManaApp: App {
                 store: Store(
                     initialState: Root.State(),
                     reducer: Root()
-                )
+                ),
+                home: {
+                    Text("home")
+                },
+                add: {
+                    Text("add")
+                },
+                setting: {
+                    Text("setting")
+                }
+                
             )
         }
     }

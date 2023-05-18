@@ -2,9 +2,24 @@ import SwiftUI
 import ComposableArchitecture
 import UIKit
 
-struct Layout: View {
+struct Layout<Home: View, Add: View, Setting: View>: View {
     
     let store: StoreOf<Root>
+    let home:Home
+    let add: Add
+    let setting: Setting
+    
+    init(
+        store: StoreOf<Root>,
+        @ViewBuilder home: () -> Home,
+        @ViewBuilder add: () -> Add,
+        @ViewBuilder setting: () -> Setting
+    ) {
+        self.store = store
+        self.home = home()
+        self.add = add()
+        self.setting = setting()
+    }
     
     var body: some View {
         WithViewStore(self.store) {viewStore in
@@ -15,11 +30,11 @@ struct Layout: View {
                         .edgesIgnoringSafeArea(.top)
                     HStack{
                         if viewStore.view == StateType.home {
-                            Text("home")
+                            home
                         } else if viewStore.view == StateType.add {
-                            Text("add")
+                            add
                         } else if viewStore.view == StateType.setting {
-                            Text("setting")
+                            setting
                         }
                     }
                 }
@@ -56,7 +71,16 @@ struct Layout_Previews: PreviewProvider {
             store: Store(
                 initialState: Root.State(),
                 reducer: Root()
-            )
+            ),
+            home: {
+                Text("home")
+            },
+            add: {
+                Text("add")
+            },
+            setting: {
+                Text("setting")
+            }
         )
     }
 }
