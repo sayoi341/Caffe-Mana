@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C6045E172A131D6E0033480C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C6045E162A131D6E0033480C /* ComposableArchitecture */; };
 		C6045E1B2A1375820033480C /* drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E1A2A1375820033480C /* drink.swift */; };
 		C6045E1E2A137C650033480C /* drinkDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E1D2A137C650033480C /* drinkDataBase.swift */; };
 		C6045E212A13A84E0033480C /* svgImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E202A13A84E0033480C /* svgImage.swift */; };
@@ -26,6 +25,7 @@
 		F5D3AC862A15E9D800A47457 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F5D3AC852A15E9D800A47457 /* RealmSwift */; };
 		F5D3AC892A15EEB400A47457 /* drinkLogRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3AC882A15EEB400A47457 /* drinkLogRealm.swift */; };
 		F5D3AC8F2A171E6D00A47457 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3AC8E2A171E6D00A47457 /* Home.swift */; };
+		F5DB9E622A17A96F004B1921 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = F5DB9E612A17A96F004B1921 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,7 @@
 			files = (
 				F5D3AC862A15E9D800A47457 /* RealmSwift in Frameworks */,
 				F5D3AC842A15E9D800A47457 /* Realm in Frameworks */,
-				C6045E172A131D6E0033480C /* ComposableArchitecture in Frameworks */,
+				F5DB9E622A17A96F004B1921 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,9 +225,9 @@
 			);
 			name = "Caffe-Mana";
 			packageProductDependencies = (
-				C6045E162A131D6E0033480C /* ComposableArchitecture */,
 				F5D3AC832A15E9D800A47457 /* Realm */,
 				F5D3AC852A15E9D800A47457 /* RealmSwift */,
+				F5DB9E612A17A96F004B1921 /* ComposableArchitecture */,
 			);
 			productName = "Caffe-Mana";
 			productReference = F55E95B42A128EA800B4F7CA /* Caffe-Mana.app */;
@@ -302,8 +302,8 @@
 			);
 			mainGroup = F55E95AB2A128EA700B4F7CA;
 			packageReferences = (
-				C6045E152A131D6E0033480C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				F5D3AC822A15E9D800A47457 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				F5DB9E602A17A96F004B1921 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = F55E95B52A128EA800B4F7CA /* Products */;
 			projectDirPath = "";
@@ -685,14 +685,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C6045E152A131D6E0033480C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture#what-is-the-composable-architecture";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.53.0;
-			};
-		};
 		F5D3AC822A15E9D800A47457 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -701,14 +693,17 @@
 				kind = branch;
 			};
 		};
+		F5DB9E602A17A96F004B1921 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.53.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C6045E162A131D6E0033480C /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C6045E152A131D6E0033480C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
 		F5D3AC832A15E9D800A47457 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F5D3AC822A15E9D800A47457 /* XCRemoteSwiftPackageReference "realm-swift" */;
@@ -718,6 +713,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F5D3AC822A15E9D800A47457 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		F5DB9E612A17A96F004B1921 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5DB9E602A17A96F004B1921 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
