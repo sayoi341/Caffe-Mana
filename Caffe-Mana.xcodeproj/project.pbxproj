@@ -22,6 +22,10 @@
 		F55E95D32A128EA900B4F7CA /* Caffe_ManaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95D22A128EA900B4F7CA /* Caffe_ManaUITests.swift */; };
 		F55E95D52A128EA900B4F7CA /* Caffe_ManaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95D42A128EA900B4F7CA /* Caffe_ManaUITestsLaunchTests.swift */; };
 		F5D3AC7D2A14786900A47457 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3AC7C2A14786900A47457 /* Loading.swift */; };
+		F5D3AC842A15E9D800A47457 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = F5D3AC832A15E9D800A47457 /* Realm */; };
+		F5D3AC862A15E9D800A47457 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F5D3AC852A15E9D800A47457 /* RealmSwift */; };
+		F5D3AC892A15EEB400A47457 /* drinkLogRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3AC882A15EEB400A47457 /* drinkLogRealm.swift */; };
+		F5D3AC8F2A171E6D00A47457 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3AC8E2A171E6D00A47457 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,8 @@
 		F55E95D22A128EA900B4F7CA /* Caffe_ManaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffe_ManaUITests.swift; sourceTree = "<group>"; };
 		F55E95D42A128EA900B4F7CA /* Caffe_ManaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffe_ManaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F5D3AC7C2A14786900A47457 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; tabWidth = 4; };
+		F5D3AC882A15EEB400A47457 /* drinkLogRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drinkLogRealm.swift; sourceTree = "<group>"; };
+		F5D3AC8E2A171E6D00A47457 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D3AC862A15E9D800A47457 /* RealmSwift in Frameworks */,
+				F5D3AC842A15E9D800A47457 /* Realm in Frameworks */,
 				C6045E172A131D6E0033480C /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +102,7 @@
 				C6045E222A13C0510033480C /* Layout.swift */,
 				C67878B82A15D49D00F94692 /* SideScroll.swift */,
 				F5D3AC7C2A14786900A47457 /* Loading.swift */,
+				F5D3AC8E2A171E6D00A47457 /* Home.swift */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -153,6 +162,7 @@
 		F55E95B62A128EA800B4F7CA /* Caffe-Mana */ = {
 			isa = PBXGroup;
 			children = (
+				F5D3AC872A15EB0E00A47457 /* DataAccess */,
 				C6045E1F2A13A8220033480C /* utils */,
 				C6045E192A1374C80033480C /* Types */,
 				C6045E182A1374BB0033480C /* Consts */,
@@ -190,6 +200,14 @@
 			path = "Caffe-ManaUITests";
 			sourceTree = "<group>";
 		};
+		F5D3AC872A15EB0E00A47457 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				F5D3AC882A15EEB400A47457 /* drinkLogRealm.swift */,
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,6 +226,8 @@
 			name = "Caffe-Mana";
 			packageProductDependencies = (
 				C6045E162A131D6E0033480C /* ComposableArchitecture */,
+				F5D3AC832A15E9D800A47457 /* Realm */,
+				F5D3AC852A15E9D800A47457 /* RealmSwift */,
 			);
 			productName = "Caffe-Mana";
 			productReference = F55E95B42A128EA800B4F7CA /* Caffe-Mana.app */;
@@ -283,6 +303,7 @@
 			mainGroup = F55E95AB2A128EA700B4F7CA;
 			packageReferences = (
 				C6045E152A131D6E0033480C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				F5D3AC822A15E9D800A47457 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = F55E95B52A128EA800B4F7CA /* Products */;
 			projectDirPath = "";
@@ -327,9 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6045E212A13A84E0033480C /* svgImage.swift in Sources */,
+				F5D3AC892A15EEB400A47457 /* drinkLogRealm.swift in Sources */,
 				F55E95BA2A128EA800B4F7CA /* ContentView.swift in Sources */,
 				C6045E252A13C4B90033480C /* Root.swift in Sources */,
 				C6045E1B2A1375820033480C /* drink.swift in Sources */,
+				F5D3AC8F2A171E6D00A47457 /* Home.swift in Sources */,
 				F55E95B82A128EA800B4F7CA /* Caffe_ManaApp.swift in Sources */,
 				C6045E232A13C0510033480C /* Layout.swift in Sources */,
 				F5D3AC7D2A14786900A47457 /* Loading.swift in Sources */,
@@ -493,7 +516,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Caffe-Mana/Preview Content\"";
-				DEVELOPMENT_TEAM = GG7W7F3CTU;
+				DEVELOPMENT_TEAM = 26MRW24T23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -506,7 +529,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Monsters.Caffe-Mana2";
+				PRODUCT_BUNDLE_IDENTIFIER = "Monsters.Caffe-Mana6";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -522,9 +545,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Caffe-Mana/Preview Content\"";
-				DEVELOPMENT_TEAM = GG7W7F3CTU;
+				DEVELOPMENT_TEAM = 26MRW24T23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Caffe-Mana/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -669,6 +693,14 @@
 				minimumVersion = 0.53.0;
 			};
 		};
+		F5D3AC822A15E9D800A47457 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -676,6 +708,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C6045E152A131D6E0033480C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		F5D3AC832A15E9D800A47457 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5D3AC822A15E9D800A47457 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		F5D3AC852A15E9D800A47457 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5D3AC822A15E9D800A47457 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
