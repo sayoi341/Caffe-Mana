@@ -5,12 +5,13 @@ import ComposableArchitecture
 
 struct Home: View {
     let year: Int
-    @ObservedRealmObject var monthLog: MonthLogRecord
+    let month: Int
+    let drinks: [DrinkLogRecord]
     
     var scene: SKScene {
         let scene = GameScene()
         scene.scaleMode = .resizeFill
-        scene.drinks = monthLog.drinkLogs
+        scene.drinks = drinks
         return scene
     }
     
@@ -60,7 +61,7 @@ struct Home: View {
                         Text(String(year))
                             .font(.caption)
                             .foregroundColor(Color.white)
-                        Text(numToMonth(month: monthLog.month))
+                        Text(numToMonth(month: month))
                             .font(.headline)
                             .bold()
                             .foregroundColor(Color.white)
@@ -93,8 +94,13 @@ struct Home_Previews: PreviewProvider {
             ),
             home: {
                 SideScrollCenter(isShowIndex: true) {
-                    Home(year: 2023, monthLog: MonthLogRecord(month: 4, DrinkLogs: List<DrinkLogRecord>()))
-                    Home(year: 2023, monthLog: MonthLogRecord(month: 5, DrinkLogs: List<DrinkLogRecord>()))
+                    Home(
+                        year: 1,
+                        month: 1,
+                        drinks: [
+                            DrinkLogRecord(drinkId: "m1", date: Date()),
+                        ]
+                    )
                 }
                 
             },
