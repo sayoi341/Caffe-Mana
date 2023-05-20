@@ -94,7 +94,7 @@ class db {
                 let monthLogFirst = yearLogFirst?.monthLogs.filter { monthLog in
                     monthLog.month == month
                 }.first
-                if monthLogFirst == nil {
+                if monthLogFirst != nil {
                     
                     //日テーブル
                     let dayLogFirst = monthLogFirst?.dayLogs.filter { dayLog in

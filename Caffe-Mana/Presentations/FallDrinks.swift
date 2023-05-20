@@ -3,7 +3,7 @@ import RealmSwift
 
 class GameScene: SKScene {
     
-    open var drinks: RealmSwift.List<DrinkLogRecord>?
+    open var drinks: [DrinkLogRecord]?
     
     override func didMove(to view: SKView) {
         self.backgroundColor = .clear
