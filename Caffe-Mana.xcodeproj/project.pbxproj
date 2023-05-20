@@ -12,8 +12,10 @@
 		C6045E212A13A84E0033480C /* svgImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E202A13A84E0033480C /* svgImage.swift */; };
 		C6045E232A13C0510033480C /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E222A13C0510033480C /* Layout.swift */; };
 		C6045E252A13C4B90033480C /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E242A13C4B90033480C /* Root.swift */; };
+		C63C7ABB2A193BF200CE906C /* numToManth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63C7ABA2A193BF200CE906C /* numToManth.swift */; };
 		C67878B92A15D49D00F94692 /* SideScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67878B82A15D49D00F94692 /* SideScroll.swift */; };
 		C67B8F202A17B8A1008E3B0A /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67B8F1F2A17B8A1008E3B0A /* Add.swift */; };
+		C68C622C2A1928D2005171E9 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C622B2A1928D2005171E9 /* Receipt.swift */; };
 		C6CD06792A1679B30092B847 /* VendingMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06782A1679B30092B847 /* VendingMachine.swift */; };
 		C6CD067B2A1722680092B847 /* VendingMachineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD067A2A1722680092B847 /* VendingMachineButton.swift */; };
 		C6CD067D2A178B4D0092B847 /* AddConfarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD067C2A178B4D0092B847 /* AddConfarm.swift */; };
@@ -57,8 +59,10 @@
 		C6045E202A13A84E0033480C /* svgImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = svgImage.swift; sourceTree = "<group>"; };
 		C6045E222A13C0510033480C /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		C6045E242A13C4B90033480C /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
+		C63C7ABA2A193BF200CE906C /* numToManth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numToManth.swift; sourceTree = "<group>"; };
 		C67878B82A15D49D00F94692 /* SideScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideScroll.swift; sourceTree = "<group>"; };
 		C67B8F1F2A17B8A1008E3B0A /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
+		C68C622B2A1928D2005171E9 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		C6CD06782A1679B30092B847 /* VendingMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachine.swift; sourceTree = "<group>"; };
 		C6CD067A2A1722680092B847 /* VendingMachineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachineButton.swift; sourceTree = "<group>"; };
 		C6CD067C2A178B4D0092B847 /* AddConfarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfarm.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 				C6CD067A2A1722680092B847 /* VendingMachineButton.swift */,
 				F5D3AC8E2A171E6D00A47457 /* Home.swift */,
 				F53045682A18D9B9003A0847 /* FallDrinks.swift */,
+				C68C622B2A1928D2005171E9 /* Receipt.swift */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				C6045E202A13A84E0033480C /* svgImage.swift */,
+				C63C7ABA2A193BF200CE906C /* numToManth.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -375,8 +381,10 @@
 				C6CD067B2A1722680092B847 /* VendingMachineButton.swift in Sources */,
 				C6CD06792A1679B30092B847 /* VendingMachine.swift in Sources */,
 				C6045E1B2A1375820033480C /* drink.swift in Sources */,
+				C63C7ABB2A193BF200CE906C /* numToManth.swift in Sources */,
 				F5D3AC8F2A171E6D00A47457 /* Home.swift in Sources */,
 				F55E95B82A128EA800B4F7CA /* Caffe_ManaApp.swift in Sources */,
+				C68C622C2A1928D2005171E9 /* Receipt.swift in Sources */,
 				C67B8F202A17B8A1008E3B0A /* Add.swift in Sources */,
 				C6045E232A13C0510033480C /* Layout.swift in Sources */,
 				F5D3AC7D2A14786900A47457 /* Loading.swift in Sources */,
@@ -540,7 +548,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Caffe-Mana/Preview Content\"";
-				DEVELOPMENT_TEAM = 26MRW24T23;
+				DEVELOPMENT_TEAM = GG7W7F3CTU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -554,7 +562,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Monsters.Caffe-Mana6";
+				PRODUCT_BUNDLE_IDENTIFIER = "Monsters.Caffe-Mana7";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -570,7 +578,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Caffe-Mana/Preview Content\"";
-				DEVELOPMENT_TEAM = 26MRW24T23;
+				DEVELOPMENT_TEAM = GG7W7F3CTU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Caffe-Mana/Info.plist";
@@ -585,7 +593,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Monsters.Caffe-Mana6";
+				PRODUCT_BUNDLE_IDENTIFIER = "Monsters.Caffe-Mana7";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
