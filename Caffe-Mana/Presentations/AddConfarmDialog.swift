@@ -1,10 +1,13 @@
 import SwiftUI
 import ComposableArchitecture
+import RealmSwift
 
 struct AddConfarmDialog: View {
     let store: StoreOf<AddConfarm>
     
     var body: some View{
+        @ObservedResults(YearLogRecord.self) var yearLogs
+        let db = db()
         WithViewStore(self.store) { viewStore in
             if  viewStore.isConfarmOpen {
                 ZStack{
@@ -49,6 +52,9 @@ struct AddConfarmDialog: View {
                             
                             
                             Button(action:{
+                                if viewStore.addData.drinkId != "nil" {
+                                    db.addDrink(drinkId: viewStore.addData.drinkId)
+                                }
                                 viewStore.send(.closeConfarm)
                                 viewStore.send(.setIsDropShow(status: true))
                                 viewStore.send(.startDrop)
