@@ -27,7 +27,6 @@ struct Layout<Home: View, Add: View, Setting: View>: View {
             NavigationView {
                 ZStack {
                     Color("background")
-                        .edgesIgnoringSafeArea(.top)
                     HStack{
                         if viewStore.view == StateType.home {
                             home
@@ -38,6 +37,7 @@ struct Layout<Home: View, Add: View, Setting: View>: View {
                         }
                     }
                 }
+                .edgesIgnoringSafeArea(.top)
                 .navigationBarHidden(true)
                 .toolbar {
                     ToolbarItem(placement: .bottomBar){
