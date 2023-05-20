@@ -27,7 +27,6 @@ struct Layout<Home: View, Add: View, Setting: View>: View {
             NavigationView {
                 ZStack {
                     Color("background")
-                        .edgesIgnoringSafeArea(.top)
                     HStack{
                         if viewStore.view == StateType.home {
                             home
@@ -38,6 +37,7 @@ struct Layout<Home: View, Add: View, Setting: View>: View {
                         }
                     }
                 }
+                .edgesIgnoringSafeArea(.top)
                 .navigationBarHidden(true)
                 .toolbar {
                     ToolbarItem(placement: .bottomBar){
@@ -56,20 +56,27 @@ struct Layout<Home: View, Add: View, Setting: View>: View {
 
                             Button(action: {
                                 viewStore.send(.viewHome)
+                                viewStore.send(.closeReceipt)
                             }, label: {
                                 VStack(spacing: 2){
                                     SVGImage(name: "button-home").frame(width: 30, height: 30)
                                     Rectangle()
-                                    .fill(viewStore.view == StateType.home ? Color.black : Color.white)
+                                        .fill(viewStore.view == StateType.home && viewStore.isReceiptOpen == false ? Color.black : Color.white)
                                         .frame(width: 30, height: 2)
                                         .cornerRadius(1)
                                 }
                             })
                             Button(action: {
-                                
                                 viewStore.send(.viewHome)
+                                viewStore.send(.openReceipt)
                             }, label: {
-                                SVGImage(name: "button-docs").frame(width: 30, height: 30)
+                                VStack(spacing: 2){
+                                    SVGImage(name: "button-docs").frame(width: 30, height: 30)
+                                    Rectangle()
+                                        .fill(viewStore.view == StateType.home && viewStore.isReceiptOpen == true ? Color.black : Color.white)
+                                        .frame(width: 30, height: 2)
+                                        .cornerRadius(1)
+                                }
                             })
                         }
                     }
