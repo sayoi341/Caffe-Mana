@@ -8,15 +8,14 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         self.backgroundColor = .clear
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-        print("make scene")
         
+        var position = 200.0
         if drinks != nil {
             for drink in drinks! {
                 let thisDrink = drinkData[drink.drinkId]
-                var position = 500.0
                 if thisDrink != nil {
+                    position += 20.0
                     makeDrink(at: CGPoint(x: 220, y: position), drinkName: thisDrink!.fileName)
-                    position += 100.0
                 }
             }
         }

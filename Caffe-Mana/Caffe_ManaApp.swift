@@ -6,8 +6,7 @@ import RealmSwift
 struct Caffe_ManaApp: SwiftUI.App {
     var body: some Scene {
         @ObservedResults(YearLogRecord.self) var yearLogs
-        let db = db()
-        
+                
         WindowGroup {
             Layout(
                 store: Store(

@@ -18,7 +18,6 @@
 		C6CD067B2A1722680092B847 /* VendingMachineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD067A2A1722680092B847 /* VendingMachineButton.swift */; };
 		C6CD067D2A178B4D0092B847 /* AddConfarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD067C2A178B4D0092B847 /* AddConfarm.swift */; };
 		C6CD067F2A17A8A10092B847 /* AddConfarmDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD067E2A17A8A10092B847 /* AddConfarmDialog.swift */; };
-		F53045672A18CA69003A0847 /* CacheScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53045662A18CA69003A0847 /* CacheScene.swift */; };
 		F53045692A18D9B9003A0847 /* FallDrinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53045682A18D9B9003A0847 /* FallDrinks.swift */; };
 		F55E95B82A128EA800B4F7CA /* Caffe_ManaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95B72A128EA800B4F7CA /* Caffe_ManaApp.swift */; };
 		F55E95BA2A128EA800B4F7CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95B92A128EA800B4F7CA /* ContentView.swift */; };
@@ -64,7 +63,6 @@
 		C6CD067A2A1722680092B847 /* VendingMachineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachineButton.swift; sourceTree = "<group>"; };
 		C6CD067C2A178B4D0092B847 /* AddConfarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfarm.swift; sourceTree = "<group>"; };
 		C6CD067E2A17A8A10092B847 /* AddConfarmDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfarmDialog.swift; sourceTree = "<group>"; };
-		F53045662A18CA69003A0847 /* CacheScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheScene.swift; sourceTree = "<group>"; };
 		F53045682A18D9B9003A0847 /* FallDrinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallDrinks.swift; sourceTree = "<group>"; };
 		F55E95B42A128EA800B4F7CA /* Caffe-Mana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Caffe-Mana.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55E95B72A128EA800B4F7CA /* Caffe_ManaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffe_ManaApp.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 			children = (
 				C6045E242A13C4B90033480C /* Root.swift */,
 				C6CD067C2A178B4D0092B847 /* AddConfarm.swift */,
-				F53045662A18CA69003A0847 /* CacheScene.swift */,
 			);
 			path = Domains;
 			sourceTree = "<group>";
@@ -385,7 +382,6 @@
 				F5D3AC7D2A14786900A47457 /* Loading.swift in Sources */,
 				C67878B92A15D49D00F94692 /* SideScroll.swift in Sources */,
 				C6045E1E2A137C650033480C /* drinkDataBase.swift in Sources */,
-				F53045672A18CA69003A0847 /* CacheScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

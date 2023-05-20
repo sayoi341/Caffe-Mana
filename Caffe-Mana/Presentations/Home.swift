@@ -14,11 +14,65 @@ struct Home: View {
         return scene
     }
     
+    func numToMonth (month: Int) -> String {
+        switch (month) {
+        case 1:
+            return "January"
+        case 2:
+            return "February"
+        case 3:
+            return "March"
+        case 4:
+            return "April"
+        case 5:
+            return "May"
+        case 6:
+            return "June"
+        case 7:
+            return "July"
+        case 8:
+            return "August"
+        case 9:
+            return "September"
+        case 10:
+            return "October"
+        case 11:
+            return "November"
+        case 12:
+            return "December"
+        default:
+            return ""
+        }
+    }
+    
     var body: some View {
+        
         ZStack {
-            HStack {
-                Text(String(year))
-                Text(String(monthLog.month))
+            HStack() {
+                VStack(alignment: .trailing) {
+                    Text("400mg")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                    Text("Caffe Mana")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                    VStack{
+                        Text(String(year))
+                            .font(.caption)
+                            .foregroundColor(Color.white)
+                        Text(numToMonth(month: monthLog.month))
+                            .font(.headline)
+                            .bold()
+                            .foregroundColor(Color.white)
+                    }
+                    .padding(.horizontal,30)
+                    .padding(.vertical, 10)
+                    .background(Color.gray)
+                    .cornerRadius(10)
+                    Spacer()
+                }
+                .padding(50)
+                Spacer()
                 SVGImage(name: "scale")
                     .frame(width: 120)
             }
@@ -39,8 +93,8 @@ struct Home_Previews: PreviewProvider {
             ),
             home: {
                 SideScrollCenter(isShowIndex: true) {
-                   // Home(year: 2023, monthLog: MonthLogRecord(month: 4, DrinkLogs: List<DrinkLogRecord>()))
-                   // Home(year: 2023, monthLog: MonthLogRecord(month: 5, DrinkLogs: List<DrinkLogRecord>()))
+                    Home(year: 2023, monthLog: MonthLogRecord(month: 4, DrinkLogs: List<DrinkLogRecord>()))
+                    Home(year: 2023, monthLog: MonthLogRecord(month: 5, DrinkLogs: List<DrinkLogRecord>()))
                 }
                 
             },
