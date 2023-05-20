@@ -4,23 +4,23 @@ import SpriteKit
 import ComposableArchitecture
 
 class GameScene: SKScene {
+    
+    open var drinks: RealmSwift.List<DrinkLogRecord>?
+    
     override func didMove(to view: SKView) {
         self.backgroundColor = .clear
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-            let location = touch.location(in: self)
-            makeDrink(at: location)
-            
+        for drink in drinks! {
+            let drinkName = drinkData.first(where: {String($0.id) == drink.drinkId})?.fileName
+            makeDrink(at: CGPoint(x: 220, y: 300), drinkName: drinkName == nil ? "monsterEnergy" : drinkName!)
         }
     }
     
-    func makeDrink(at position: CGPoint) {
-        let drink = SKSpriteNode(imageNamed: "monsterEnergy")
+    public func makeDrink(at position:CGPoint, drinkName: String) {
+        let drink = SKSpriteNode(imageNamed: drinkName)
         drink.physicsBody = SKPhysicsBody(rectangleOf: drink.size)
         drink.position = position
+        drink.zRotation = CGFloat(Float.random(in: 0...2) * Float.pi)
         addChild(drink)
     }
 }
@@ -34,11 +34,23 @@ struct Home: View {
     var scene: SKScene {
         let scene = GameScene()
         scene.scaleMode = .resizeFill
+        scene.drinks = monthLog.drinkLogs
         return scene
     }
     
     var body: some View {
-        SpriteView(scene: self.scene, options: [.allowsTransparency])
+        ZStack {
+            HStack {
+                Text(String(year))
+                Text(String(monthLog.month))
+                SVGImage(name: "scale")
+                    .frame(width: 120)
+            }
+                
+            SpriteView(scene: self.scene, options: [.allowsTransparency])
+                
+                
+        }
     }
 }
 
