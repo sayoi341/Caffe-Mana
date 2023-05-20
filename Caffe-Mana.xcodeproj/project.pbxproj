@@ -13,6 +13,11 @@
 		C6045E232A13C0510033480C /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E222A13C0510033480C /* Layout.swift */; };
 		C6045E252A13C4B90033480C /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045E242A13C4B90033480C /* Root.swift */; };
 		C67878B92A15D49D00F94692 /* SideScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67878B82A15D49D00F94692 /* SideScroll.swift */; };
+		C67B8F202A17B8A1008E3B0A /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67B8F1F2A17B8A1008E3B0A /* Add.swift */; };
+		C6CD06792A1679B30092B847 /* VendingMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD06782A1679B30092B847 /* VendingMachine.swift */; };
+		C6CD067B2A1722680092B847 /* VendingMachineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD067A2A1722680092B847 /* VendingMachineButton.swift */; };
+		C6CD067D2A178B4D0092B847 /* AddConfarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD067C2A178B4D0092B847 /* AddConfarm.swift */; };
+		C6CD067F2A17A8A10092B847 /* AddConfarmDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CD067E2A17A8A10092B847 /* AddConfarmDialog.swift */; };
 		F55E95B82A128EA800B4F7CA /* Caffe_ManaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95B72A128EA800B4F7CA /* Caffe_ManaApp.swift */; };
 		F55E95BA2A128EA800B4F7CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55E95B92A128EA800B4F7CA /* ContentView.swift */; };
 		F55E95BC2A128EA900B4F7CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55E95BB2A128EA900B4F7CA /* Assets.xcassets */; };
@@ -52,6 +57,11 @@
 		C6045E222A13C0510033480C /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		C6045E242A13C4B90033480C /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		C67878B82A15D49D00F94692 /* SideScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideScroll.swift; sourceTree = "<group>"; };
+		C67B8F1F2A17B8A1008E3B0A /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
+		C6CD06782A1679B30092B847 /* VendingMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachine.swift; sourceTree = "<group>"; };
+		C6CD067A2A1722680092B847 /* VendingMachineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachineButton.swift; sourceTree = "<group>"; };
+		C6CD067C2A178B4D0092B847 /* AddConfarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfarm.swift; sourceTree = "<group>"; };
+		C6CD067E2A17A8A10092B847 /* AddConfarmDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfarmDialog.swift; sourceTree = "<group>"; };
 		F55E95B42A128EA800B4F7CA /* Caffe-Mana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Caffe-Mana.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55E95B72A128EA800B4F7CA /* Caffe_ManaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffe_ManaApp.swift; sourceTree = "<group>"; };
 		F55E95B92A128EA800B4F7CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +112,10 @@
 				C6045E222A13C0510033480C /* Layout.swift */,
 				C67878B82A15D49D00F94692 /* SideScroll.swift */,
 				F5D3AC7C2A14786900A47457 /* Loading.swift */,
+				C6CD06782A1679B30092B847 /* VendingMachine.swift */,
+				C6CD067E2A17A8A10092B847 /* AddConfarmDialog.swift */,
+				C67B8F1F2A17B8A1008E3B0A /* Add.swift */,
+				C6CD067A2A1722680092B847 /* VendingMachineButton.swift */,
 				F5D3AC8E2A171E6D00A47457 /* Home.swift */,
 			);
 			path = Presentations;
@@ -111,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				C6045E242A13C4B90033480C /* Root.swift */,
+				C6CD067C2A178B4D0092B847 /* AddConfarm.swift */,
 			);
 			path = Domains;
 			sourceTree = "<group>";
@@ -350,10 +365,15 @@
 				C6045E212A13A84E0033480C /* svgImage.swift in Sources */,
 				F5D3AC892A15EEB400A47457 /* drinkLogRealm.swift in Sources */,
 				F55E95BA2A128EA800B4F7CA /* ContentView.swift in Sources */,
+				C6CD067D2A178B4D0092B847 /* AddConfarm.swift in Sources */,
 				C6045E252A13C4B90033480C /* Root.swift in Sources */,
+				C6CD067F2A17A8A10092B847 /* AddConfarmDialog.swift in Sources */,
+				C6CD067B2A1722680092B847 /* VendingMachineButton.swift in Sources */,
+				C6CD06792A1679B30092B847 /* VendingMachine.swift in Sources */,
 				C6045E1B2A1375820033480C /* drink.swift in Sources */,
 				F5D3AC8F2A171E6D00A47457 /* Home.swift in Sources */,
 				F55E95B82A128EA800B4F7CA /* Caffe_ManaApp.swift in Sources */,
+				C67B8F202A17B8A1008E3B0A /* Add.swift in Sources */,
 				C6045E232A13C0510033480C /* Layout.swift in Sources */,
 				F5D3AC7D2A14786900A47457 /* Loading.swift in Sources */,
 				C67878B92A15D49D00F94692 /* SideScroll.swift in Sources */,
@@ -516,7 +536,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Caffe-Mana/Preview Content\"";
-				DEVELOPMENT_TEAM = 26MRW24T23;
+				DEVELOPMENT_TEAM = GG7W7F3CTU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -529,7 +549,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Monsters.Caffe-Mana6";
+				PRODUCT_BUNDLE_IDENTIFIER = "Monsters.Caffe-Mana7";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -545,7 +565,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Caffe-Mana/Preview Content\"";
-				DEVELOPMENT_TEAM = 26MRW24T23;
+				DEVELOPMENT_TEAM = GG7W7F3CTU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Caffe-Mana/Info.plist";
