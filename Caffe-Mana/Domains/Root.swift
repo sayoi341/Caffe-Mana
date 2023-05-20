@@ -9,12 +9,15 @@ enum StateType {
 struct Root: ReducerProtocol {
     struct State: Equatable {
         var view:StateType = .home
+        var isReceiptOpen: Bool = false
     }
     
     enum Action: Equatable {
         case viewHome
         case viewAdd
         case viewSetting
+        case openReceipt
+        case closeReceipt
     }
     
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
@@ -27,6 +30,12 @@ struct Root: ReducerProtocol {
             return .none
         case .viewSetting:
             state.view  = .setting
+            return .none
+        case .openReceipt:
+            state.isReceiptOpen = true
+            return .none
+        case .closeReceipt:
+            state.isReceiptOpen = false
             return .none
         }
     }

@@ -5,23 +5,33 @@ import RealmSwift
 @main
 struct Caffe_ManaApp: SwiftUI.App {
     var body: some Scene {
+        let store = Store(
+            initialState: Root.State(),
+            reducer: Root()
+        )
         @ObservedResults(YearLogRecord.self) var yearLogs
                 
         WindowGroup {
             Layout(
-                store: Store(
-                    initialState: Root.State(),
-                    reducer: Root()
-                ),
+                store: store,
                 home: {
                     SideScrollCenter(isShowIndex: true) {
                         ForEach(yearLogs, id:\._id, content: { yearLog in
                             ForEach(yearLog.monthLogs, id:\._id, content: { monthLog in
-                                Home(
-                                    year: yearLog.year,
-                                    month: monthLog.month,
-                                    drinks: Array(monthLog.dayLogs.flatMap { $0.drinkLogs })
-                                )
+                                ZStack{
+                                    Home(
+                                        year: yearLog.year,
+                                        month: monthLog.month,
+                                        drinks: Array(monthLog.dayLogs.flatMap { $0.drinkLogs })
+                                    )
+                                    Receipt(
+                                        store: store,
+                                        year: yearLog.year,
+                                        month: monthLog.month,
+                                        days: monthLog.dayLogs
+                                        
+                                    )
+                                }
                             })
                         })
                     }
