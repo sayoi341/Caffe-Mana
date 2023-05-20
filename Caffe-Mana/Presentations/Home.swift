@@ -7,6 +7,20 @@ struct Home: View {
     let year: Int
     let month: Int
     let drinks: [DrinkLogRecord]
+    var caffeine: Int
+    
+    init(year: Int, month: Int, drinks: [DrinkLogRecord]) {
+        self.year = year
+        self.month = month
+        self.drinks = drinks
+        self.caffeine = drinks.reduce(0, { re, d in
+            if let dd = drinkData[d.drinkId] {
+                return re + dd.cafeine
+            } else {
+                return re
+            }
+        })
+    }
     
     var scene: SKScene {
         let scene = GameScene()
@@ -19,7 +33,7 @@ struct Home: View {
         ZStack {
             HStack() {
                 VStack(alignment: .trailing) {
-                    Text("400mg")
+                    Text(String("400mg"))
                         .font(.caption)
                         .foregroundColor(.gray)
                     Text("Caffe Mana")
@@ -44,6 +58,14 @@ struct Home: View {
                 Spacer()
                 SVGImage(name: "scale")
                     .frame(width: 120)
+            }
+            
+            GeometryReader{ g in
+                Rectangle()
+                    .fill(Color(red:0.52, green:0.91, blue:0.38, opacity: 0.5))
+                    .frame(width: g.size.width, height:CGFloat(3.5 * Double(caffeine)))
+                    .position(x: g.size.width/2, y: g.size.height)
+                
             }
                 
             SpriteView(scene: self.scene, options: [.allowsTransparency])

@@ -68,6 +68,7 @@
 		C6CD067C2A178B4D0092B847 /* AddConfarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfarm.swift; sourceTree = "<group>"; };
 		C6CD067E2A17A8A10092B847 /* AddConfarmDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfarmDialog.swift; sourceTree = "<group>"; };
 		F53045682A18D9B9003A0847 /* FallDrinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallDrinks.swift; sourceTree = "<group>"; };
+		F530456C2A192758003A0847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F55E95B42A128EA800B4F7CA /* Caffe-Mana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Caffe-Mana.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55E95B72A128EA800B4F7CA /* Caffe_ManaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffe_ManaApp.swift; sourceTree = "<group>"; };
 		F55E95B92A128EA800B4F7CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -186,6 +187,7 @@
 		F55E95B62A128EA800B4F7CA /* Caffe-Mana */ = {
 			isa = PBXGroup;
 			children = (
+				F530456C2A192758003A0847 /* Info.plist */,
 				F5D3AC872A15EB0E00A47457 /* DataAccess */,
 				C6045E1F2A13A8220033480C /* utils */,
 				C6045E192A1374C80033480C /* Types */,
@@ -551,9 +553,9 @@
 				DEVELOPMENT_TEAM = GG7W7F3CTU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Caffe-Mana/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Loading;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -584,7 +586,6 @@
 				INFOPLIST_FILE = "Caffe-Mana/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Loading;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
