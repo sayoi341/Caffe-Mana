@@ -14,7 +14,7 @@ struct Caffe_ManaApp: App {
                     Text("home")
                 },
                 add: {
-                    Text("add")
+                    Add()
                 },
                 setting: {
                     Text("setting")
