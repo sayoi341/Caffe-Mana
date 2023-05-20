@@ -3,8 +3,16 @@
 <path d="M8 2.5C8 1.67157 8.67157 1 9.5 1H36.5C37.3284 1 38 1.67157 38 2.5V4H8V2.5Z" fill="#ABABAB"/>
 <path d="M41 107C41 108.105 40.1046 109 39 109L7 109C5.89543 109 5 108.105 5 107V107L41 107V107Z" fill="#ABABAB"/>
 <rect x="3" y="5" width="40" height="100" rx="3" fill="#43423D"/>
-<rect x="6" y="15" width="34" height="80" rx="7" fill="#76CEFF"/>
+<path d="M3 12C3 8.13401 6.13401 5 10 5H36C39.866 5 43 8.13401 43 12V91C43 94.866 39.866 98 36 98H10C6.13401 98 3 94.866 3 91V12Z" fill="url(#paint0_radial_85_898)"/>
 <path d="M23 88L20 22H26L23 88Z" fill="white"/>
 <path d="M32 88L29 22H35L32 88Z" fill="white"/>
 <path d="M14 88L11 22H17L14 88Z" fill="white"/>
+<defs>
+<radialGradient id="paint0_radial_85_898" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(23 51.5) rotate(90) scale(46.5 21.0209)">
+<stop stop-color="#85D3FF"/>
+<stop offset="0.65625" stop-color="#76CEFF" stop-opacity="0.754464"/>
+<stop offset="0.729167" stop-color="#76CEFF" stop-opacity="0.65625"/>
+<stop offset="1" stop-color="#76CEFF" stop-opacity="0"/>
+</radialGradient>
+</defs>
 </svg>
