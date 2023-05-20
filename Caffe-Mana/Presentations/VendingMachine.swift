@@ -127,7 +127,7 @@ struct VendingMachine: View {
                 }
                 .offset(x: geoBackground.size.width*0.05, y: geoBackground.size.height*0.1)
             }
-            .frame(width: .infinity, height: .infinity)
+//            .frame(width: .infinity, height: .infinity)
             .clipped()
         }
     }

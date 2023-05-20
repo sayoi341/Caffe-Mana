@@ -1,5 +1,6 @@
 import SwiftUI
 import ComposableArchitecture
+import RealmSwift
 
 struct Add: View {
     let store = Store(initialState: AddConfarm.State(),reducer: AddConfarm())
@@ -26,20 +27,48 @@ struct Add: View {
 
 struct Add_Previews: PreviewProvider {
     static var previews: some View {
+        @ObservedResults(YearLogRecord.self) var yearLogs
+        let db = db()
         Layout(
             store: Store(
                 initialState: Root.State(),
                 reducer: Root()
             ),
             home: {
-                Add()
+                SideScrollCenter(isShowIndex: true) {
+                    ForEach(yearLogs, id:\._id, content: { yearLog in
+                        ForEach(yearLog.monthLogs, id:\._id, content: { monthLog in
+                            Home(year: yearLog.year ,monthLog: monthLog)
+                            
+                        })
+                    })
+                }
             },
             add: {
-                Add()
+                    Add()
+                 
             },
             setting: {
-                Text("setting")
+                VStack {
+                     Button(action:{
+                         db.addDrink(drinkId: "unchi")
+                     }) {
+                         Text("add")
+                     }
+
+                     Button(action:{
+                         db.deleteDB()
+                     }) {
+                         Text("delete")
+                     }
+                     Button(action: {
+                         db.printRealmFilePath()
+                     }) {
+                         Text("print path")
+                     }
+                 }
             }
+            
         )
     }
 }

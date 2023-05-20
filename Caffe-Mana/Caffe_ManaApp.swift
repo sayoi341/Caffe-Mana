@@ -26,19 +26,6 @@ struct Caffe_ManaApp: SwiftUI.App {
                 },
                 add: {
                     Add()
-                    // VStack {
-                    //     Button(action:{
-                    //         db.addDrink(drinkId: "unchi")
-                    //     }) {
-                    //         Text("add")
-                    //     }
-                        
-                    //     Button(action:{
-                    //         db.deleteDB()
-                    //     }) {
-                    //         Text("delete")
-                    //     }
-                    // }
                 },
                 setting: {
                     Text("setting")
