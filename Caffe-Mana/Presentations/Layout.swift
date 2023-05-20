@@ -45,15 +45,29 @@ struct Layout<Home: View, Add: View, Setting: View>: View {
                             Button(action: {
                                 viewStore.send(.viewAdd)
                             }, label: {
-                                SVGImage(name: "button-add").frame(width: 30, height: 30)
+                                VStack(spacing: 2){
+                                    SVGImage(name: "button-add").frame(width: 30, height: 30)
+                                    Rectangle()
+                                    .fill(viewStore.view == StateType.add ? Color.black : Color.white)
+                                        .frame(width: 30, height: 2)
+                                        .cornerRadius(1)
+                                }
                             })
+
                             Button(action: {
                                 viewStore.send(.viewHome)
                             }, label: {
-                                SVGImage(name: "button-home").frame(width: 30, height: 30)
+                                VStack(spacing: 2){
+                                    SVGImage(name: "button-home").frame(width: 30, height: 30)
+                                    Rectangle()
+                                    .fill(viewStore.view == StateType.home ? Color.black : Color.white)
+                                        .frame(width: 30, height: 2)
+                                        .cornerRadius(1)
+                                }
                             })
                             Button(action: {
                                 
+                                viewStore.send(.viewHome)
                             }, label: {
                                 SVGImage(name: "button-docs").frame(width: 30, height: 30)
                             })
