@@ -6,7 +6,7 @@ struct AddConfarm: ReducerProtocol {
         var isConfarmOpen: Bool = false
         var isDropStart:Bool = false
         var isDropShow:Bool = false
-        var addData: DrinkData = DrinkData(name: "nil", cafeine: 0, price: 0, volume: 0, fileName: "nil")
+        var addData: DrinkData = DrinkData(drinkId:"nil", name: "nil", cafeine: 0, price: 0, volume: 0, fileName: "nil")
     }
     
     enum Action: Equatable{
@@ -25,7 +25,7 @@ struct AddConfarm: ReducerProtocol {
             if let drink = d {
                 state.addData = drink
             } else {
-                state.addData = DrinkData(name: "nil", cafeine: 0, price: 0, volume: 0, fileName: "nil")
+                state.addData = DrinkData(drinkId:"nil", name: "nil", cafeine: 0, price: 0, volume: 0, fileName: "nil")
             }
             return .none
         case .openConfarm:
