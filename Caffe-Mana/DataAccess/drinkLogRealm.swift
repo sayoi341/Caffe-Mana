@@ -19,11 +19,26 @@ class MonthLogRecord: Object, Identifiable {
     @Persisted(primaryKey: true) var _id = UUID().uuidString
     
     @Persisted var month: Int
-    @Persisted var drinkLogs: RealmSwift.List<DrinkLogRecord>
+    @Persisted var dayLogs: RealmSwift.List<DayLogRecord>
     
-    convenience init(month: Int, DrinkLogs: List<DrinkLogRecord>) {
+    
+    convenience init(month: Int, dayLogs: List<DayLogRecord>) {
         self.init()
         self.month = month
+        self.dayLogs = .init()
+        self.dayLogs = dayLogs
+    }
+}
+
+class DayLogRecord: Object, Identifiable {
+    @Persisted(primaryKey: true) var _id = UUID().uuidString
+    
+    @Persisted var day: Int
+    @Persisted var drinkLogs: RealmSwift.List<DrinkLogRecord>
+    
+    convenience init(day: Int, drinkLogs: List<DrinkLogRecord>) {
+        self.init()
+        self.day = day
         self.drinkLogs = .init()
         self.drinkLogs = drinkLogs
     }
@@ -62,32 +77,53 @@ class db {
     public func addDrink(drinkId: String) -> String {
         let year = Calendar.current.component(.year, from: Date())
         let month = Calendar.current.component(.month, from: Date())
+        let day = Calendar.current.component(.day, from: Date())
+        
         
         let drinkLog = DrinkLogRecord(drinkId: drinkId, date: Date())
         
         try! realm.write {
+            
+            //年テーブル
             let yearLogFirst = data.filter { yearLog in
                 yearLog.year == year
             }.first
-            
-            if yearLogFirst == nil {
-                let monthLog = MonthLogRecord(month: month, DrinkLogs: List<DrinkLogRecord>())
-                monthLog.drinkLogs.append(drinkLog)
-                let yearLog = YearLogRecord(year: year, monthLogs: List<MonthLogRecord>())
-                yearLog.monthLogs.append(monthLog)
-                realm.add(yearLog)
-            } else {
+            if yearLogFirst != nil {
+                
+                //月テーブル
                 let monthLogFirst = yearLogFirst?.monthLogs.filter { monthLog in
                     monthLog.month == month
                 }.first
-                
                 if monthLogFirst == nil {
-                    let monthLog = MonthLogRecord(month: month, DrinkLogs: List<DrinkLogRecord>())
-                    monthLog.drinkLogs.append(drinkLog)
-                    yearLogFirst?.monthLogs.append(monthLog)
+                    
+                    //日テーブル
+                    let dayLogFirst = monthLogFirst?.dayLogs.filter { dayLog in
+                        dayLog.day == day
+                    }.first
+                    if dayLogFirst != nil {
+                        dayLogFirst?.drinkLogs.append(drinkLog)
+                    } else {
+                        let dayLog = DayLogRecord(day: day, drinkLogs: List<DrinkLogRecord>())
+                        dayLog.drinkLogs.append(drinkLog)
+                        monthLogFirst?.dayLogs.append(dayLog)
+                    }
+                    
                 } else {
-                    monthLogFirst?.drinkLogs.append(drinkLog)
+                    let dayLog = DayLogRecord(day: day, drinkLogs: List<DrinkLogRecord>())
+                    dayLog.drinkLogs.append(drinkLog)
+                    let monthLog = MonthLogRecord(month: month, dayLogs: List<DayLogRecord>())
+                    monthLog.dayLogs.append(dayLog)
+                    yearLogFirst?.monthLogs.append(monthLog)
                 }
+                
+            } else {
+                let dayLog = DayLogRecord(day: day, drinkLogs: List<DrinkLogRecord>())
+                dayLog.drinkLogs.append(drinkLog)
+                let monthLog = MonthLogRecord(month: month, dayLogs: List<DayLogRecord>())
+                monthLog.dayLogs.append(dayLog)
+                let yearLog = YearLogRecord(year: year, monthLogs: List<MonthLogRecord>())
+                yearLog.monthLogs.append(monthLog)
+                realm.add(yearLog)
             }
         }
         
