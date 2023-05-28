@@ -69,8 +69,7 @@ struct Home: View {
             }
                 
             SpriteView(scene: self.scene, options: [.allowsTransparency])
-                
-                
+                .edgesIgnoringSafeArea(.top)
         }
     }
 }

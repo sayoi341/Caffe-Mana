@@ -24,7 +24,7 @@ struct Receipt: View {
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
         dateFormatter2.dateFormat = DateFormatter.dateFormat(fromTemplate: "HHmm", options: 0, locale: Locale(identifier: "ja_JP"))
         total = days.reduce(0, {re, day in
-            day.drinkLogs.reduce(0,{rre, log in
+            re + day.drinkLogs.reduce(0,{rre, log in
                 if let dd = drinkData[log.drinkId]{
                     return rre + dd.price
                 } else {
